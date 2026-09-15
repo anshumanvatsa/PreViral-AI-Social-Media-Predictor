@@ -407,7 +407,7 @@ MIT License — see [LICENSE](LICENSE) for details.
 
 *352,976 real training rows · 6 platforms · F1 = 0.8489 · AUC-ROC = 0.9220*
 
-**Author:** Anshuman Mishra · anshumanmishra.dev@gmail.com
+**Author:** Anshuman Mishra · atulvatsamishra@gmail.com
 
 [Try it Live](https://previral-in-268278227902.asia-south1.run.app) · [GitHub](https://github.com/anshumanvatsa/PreViral-AI-Social-Media-Predictor)
 
