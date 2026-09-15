@@ -1,0 +1,110 @@
+{
+  "sentiment_score": {
+    "direction": "increase",
+    "threshold": 0.102,
+    "derivation": "Median of HIGH-predicted posts from 50K model-evaluated synthetic sample (LightGBM v5)",
+    "p25_high": -0.338,
+    "p50_high": 0.102,
+    "p75_high": 0.488,
+    "p50_low": 0.034
+  },
+  "emotional_valence": {
+    "direction": "increase",
+    "threshold": 0.453,
+    "derivation": "Median of HIGH-predicted posts from 50K model-evaluated synthetic sample (LightGBM v5)",
+    "p25_high": 0.226,
+    "p50_high": 0.453,
+    "p75_high": 0.682,
+    "p50_low": 0.451
+  },
+  "clickbait_score": {
+    "direction": "increase",
+    "threshold": 0.204,
+    "derivation": "Median of HIGH-predicted posts from 50K model-evaluated synthetic sample (LightGBM v5)",
+    "p25_high": 0.11,
+    "p50_high": 0.204,
+    "p75_high": 0.335,
+    "p50_low": 0.2
+  },
+  "cta_present": {
+    "direction": "increase",
+    "threshold": 0.0,
+    "derivation": "Median of HIGH-predicted posts from 50K model-evaluated synthetic sample (LightGBM v5)",
+    "p25_high": 0.0,
+    "p50_high": 0.0,
+    "p75_high": 1.0,
+    "p50_low": 0.0
+  },
+  "avg_competition_ratio": {
+    "direction": "decrease",
+    "threshold": 0.455,
+    "derivation": "Median of HIGH-predicted posts from 50K model-evaluated synthetic sample (LightGBM v5)",
+    "p25_high": 0.455,
+    "p50_high": 0.614,
+    "p75_high": 0.759,
+    "p50_low": 0.613
+  },
+  "trending_hashtag_count": {
+    "direction": "increase",
+    "threshold": 2.0,
+    "derivation": "Median of HIGH-predicted posts from 50K model-evaluated synthetic sample (LightGBM v5)",
+    "p25_high": 1.0,
+    "p50_high": 2.0,
+    "p75_high": 3.0,
+    "p50_low": 2.0
+  },
+  "face_count": {
+    "direction": "increase",
+    "threshold": 2.0,
+    "derivation": "Median of HIGH-predicted posts from 50K model-evaluated synthetic sample (LightGBM v5)",
+    "p25_high": 1.0,
+    "p50_high": 2.0,
+    "p75_high": 3.0,
+    "p50_low": 1.0
+  },
+  "peak_overlap_score": {
+    "direction": "increase",
+    "threshold": 0.513,
+    "derivation": "Median of HIGH-predicted posts from 50K model-evaluated synthetic sample (LightGBM v5)",
+    "p25_high": 0.334,
+    "p50_high": 0.513,
+    "p75_high": 0.686,
+    "p50_low": 0.494
+  },
+  "color_vibrancy": {
+    "direction": "increase",
+    "threshold": 0.503,
+    "derivation": "Median of HIGH-predicted posts from 50K model-evaluated synthetic sample (LightGBM v5)",
+    "p25_high": 0.327,
+    "p50_high": 0.503,
+    "p75_high": 0.673,
+    "p50_low": 0.504
+  },
+  "brightness_score": {
+    "direction": "increase",
+    "threshold": 0.61,
+    "derivation": "Median of HIGH-predicted posts from 50K model-evaluated synthetic sample (LightGBM v5)",
+    "p25_high": 0.451,
+    "p50_high": 0.61,
+    "p75_high": 0.754,
+    "p50_low": 0.614
+  },
+  "hashtag_count": {
+    "direction": "increase",
+    "threshold": 15.0,
+    "derivation": "Median of HIGH-predicted posts from 50K model-evaluated synthetic sample (LightGBM v5)",
+    "p25_high": 7.0,
+    "p50_high": 15.0,
+    "p75_high": 22.0,
+    "p50_low": 14.0
+  },
+  "niche_hashtag_ratio": {
+    "direction": "increase",
+    "threshold": 0.386,
+    "derivation": "Median of HIGH-predicted posts from 50K model-evaluated synthetic sample (LightGBM v5)",
+    "p25_high": 0.243,
+    "p50_high": 0.386,
+    "p75_high": 0.539,
+    "p50_low": 0.384
+  }
+}

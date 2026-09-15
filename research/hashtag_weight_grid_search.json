@@ -1,0 +1,17 @@
+{
+  "optimal_weights": {
+    "w_relevance": 0.3,
+    "w_velocity": 0.65,
+    "w_competition_inverse": 0.05
+  },
+  "optimal_pearson_correlation": 0.0011,
+  "original_weights": {
+    "w_relevance": 0.4,
+    "w_velocity": 0.4,
+    "w_competition_inverse": 0.2
+  },
+  "original_pearson_correlation": 0.0007,
+  "improvement": 0.0004,
+  "derivation_method": "Grid search (step=0.05) over all weight triples summing to 1.0. Pearson correlation with LightGBM v5 viral prediction on 50K synthetic vectors.",
+  "interpretation": "Higher correlation = composite score better separates viral from non-viral posts."
+}

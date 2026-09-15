@@ -1,4 +1,4 @@
-﻿# PreViral — Know Before You Post
+# PreViral — Know Before You Post
 
 <div align="center">
 
@@ -307,15 +307,15 @@ When Gemini's rewrite scores lower than the original on LightGBM, PreViral says 
 ## License
 
 MIT License — see [LICENSE](LICENSE) for details.
-
----
-
 <div align="center">
 
-**Built with Gemini · Deployed on Google Cloud Run · Build with Gemini XPRIZE 2026**
+**PreViral — Know Before You Post**
 
 *352,976 real training rows · 6 platforms · F1 = 0.8489 · AUC-ROC = 0.9220*
+
+**Author:** Anshuman Mishra · anshumanmishra.dev@gmail.com · [GitHub](https://github.com/anshumanvatsa/PreViral-AI-Social-Media-Predictor)
 
 [Try it Live](https://previral-in-268278227902.asia-south1.run.app)
 
 </div>
+```

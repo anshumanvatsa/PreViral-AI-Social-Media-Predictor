@@ -1,0 +1,27 @@
+{
+  "model": "TrajectoryLSTM (proj+2-layer LSTM, hidden=64, Sigmoid head)",
+  "input_features": 20,
+  "output_checkpoints": [
+    "Day 1",
+    "Day 3",
+    "Day 7",
+    "Day 10"
+  ],
+  "evaluation_method": "1,000 test titles, baseline is platform power-law decay model",
+  "MAE_views": [
+    210732.0,
+    81656.0,
+    30993.0,
+    15275.0
+  ],
+  "RMSE_views": [
+    480569.0,
+    194835.0,
+    72194.0,
+    35638.0
+  ],
+  "mean_MAE": 84664.0,
+  "mean_RMSE": 195809.0,
+  "training_regime": "MSE loss, early stopping patience=10, CosineAnnealing LR",
+  "note": "MAE/RMSE in absolute predicted view counts vs power-law baseline."
+}
