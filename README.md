@@ -1,4 +1,4 @@
-﻿# PreViral — Know Before You Post
+# PreViral — Know Before You Post
 
 <div align="center">
 
@@ -43,6 +43,21 @@ The best published academic work in pre-publication engagement prediction achiev
 | Training Rows | 124,672 | 124,672 |
 | Test Rows | 24,935 | — |
 | Platforms | 6 | 6 |
+
+### Seed Stability (5-Run Reproducibility Check)
+
+To confirm the result is not a lucky random split, we ran 5 independent evaluations with different random seeds using the same LightGBM hyperparameters (1,200 iterations, same features, same 80/20 stratified split per seed). The production model uses 5,994 iterations which further improves F1 by ~0.07.
+
+| Seed | F1 | AUC |
+|---|---|---|
+| 42 | 0.7733 | 0.8765 |
+| 123 | 0.7711 | 0.8738 |
+| 456 | 0.7721 | 0.8736 |
+| 789 | 0.7683 | 0.8714 |
+| 2024 | 0.7706 | 0.8728 |
+| **Mean ± Std** | **0.7711 ± 0.0017** | **0.8736 ± 0.0017** |
+
+**Interpretation:** Standard deviation of 0.0017 confirms the model is highly stable. Results do not depend on the random seed. Full data in `research/seed_stability_results.json`.
 
 ### Per-Platform Results
 

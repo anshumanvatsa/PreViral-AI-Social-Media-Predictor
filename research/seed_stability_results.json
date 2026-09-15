@@ -1,0 +1,32 @@
+{
+  "method": "5 random seeds, 80/20 stratified train-test split per seed, LightGBM same hyperparams as v5",
+  "seeds": [
+    42,
+    123,
+    456,
+    789,
+    2024
+  ],
+  "per_seed_F1": [
+    0.7733,
+    0.7711,
+    0.7721,
+    0.7683,
+    0.7706
+  ],
+  "per_seed_AUC": [
+    0.8765,
+    0.8738,
+    0.8736,
+    0.8714,
+    0.8728
+  ],
+  "F1_mean": 0.7711,
+  "F1_std": 0.0017,
+  "AUC_mean": 0.8736,
+  "AUC_std": 0.0017,
+  "F1_min": 0.7683,
+  "F1_max": 0.7733,
+  "training_rows": 163276,
+  "features": 46
+}
