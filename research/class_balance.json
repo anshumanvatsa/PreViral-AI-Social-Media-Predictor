@@ -1,0 +1,58 @@
+{
+  "facebook": {
+    "total_rows": 1428,
+    "HIGH": 714,
+    "LOW": 714,
+    "HIGH_pct": 50.0,
+    "LOW_pct": 50.0
+  },
+  "instagram": {
+    "total_rows": 40000,
+    "HIGH": 20000,
+    "LOW": 20000,
+    "HIGH_pct": 50.0,
+    "LOW_pct": 50.0
+  },
+  "linkedin": {
+    "total_rows": 940,
+    "HIGH": 470,
+    "LOW": 470,
+    "HIGH_pct": 50.0,
+    "LOW_pct": 50.0
+  },
+  "reddit": {
+    "total_rows": 908,
+    "HIGH": 454,
+    "LOW": 454,
+    "HIGH_pct": 50.0,
+    "LOW_pct": 50.0
+  },
+  "tiktok": {
+    "total_rows": 40000,
+    "HIGH": 20000,
+    "LOW": 20000,
+    "HIGH_pct": 50.0,
+    "LOW_pct": 50.0
+  },
+  "twitter": {
+    "total_rows": 40000,
+    "HIGH": 20000,
+    "LOW": 20000,
+    "HIGH_pct": 50.0,
+    "LOW_pct": 50.0
+  },
+  "youtube": {
+    "total_rows": 40000,
+    "HIGH": 20000,
+    "LOW": 20000,
+    "HIGH_pct": 50.0,
+    "LOW_pct": 50.0
+  },
+  "overall": {
+    "total_rows": 163276,
+    "HIGH": 81638,
+    "LOW": 81638,
+    "HIGH_pct": 50.0,
+    "note": "50/50 balance enforced via stratified sampling per platform during training"
+  }
+}

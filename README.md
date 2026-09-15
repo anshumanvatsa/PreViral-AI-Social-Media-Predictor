@@ -34,41 +34,43 @@ The best published academic work in pre-publication engagement prediction achiev
 
 ### Overall Performance (v5 Production Model)
 
-| Metric | Raw LightGBM | Calibrated (Isotonic) |
+| Metric | Value | Method |
 |---|---|---|
-| **F1 Score (HIGH class)** | **0.8489** | 0.9276 |
-| **AUC-ROC** | **0.9220** | 0.9837 |
-| **Accuracy** | 85.0% | — |
-| **Confidence Gap** | 0.568 | 0.672 |
-| Training Rows | 124,672 | 124,672 |
-| Test Rows | 24,935 | — |
-| Platforms | 6 | 6 |
+| **F1 Score (HIGH class)** | **0.7784 ± 0.0044** | 5 seeds, 70/15/15 split, isotonic calibration |
+| **AUC-ROC** | **0.8805 ± 0.0002** | 5 seeds, held-out test set |
+| F1 range | 0.7701 – 0.7829 | Min/max across 5 seeds |
+| Test rows | 24,492 | Held out from all training and seed runs |
+| Platforms | 6 | — |
 
-### Seed Stability (5-Run Reproducibility Check)
+> **Note on reported vs validated F1:** Earlier experiments reported F1=0.8489 on a validation split drawn from the same training pool (no separate held-out test set). The validated number above — **F1 = 0.7784 ± 0.0044** — uses a proper 70/15/15 stratified split with isotonic calibration applied identically across all 5 seeds. This is the honest, publishable result.
 
-To confirm the result is not a lucky random split, we ran 5 independent evaluations with different random seeds using the same LightGBM hyperparameters (1,200 iterations, same features, same 80/20 stratified split per seed). The production model uses 5,994 iterations which further improves F1 by ~0.07.
+### Seed Stability (5-Run Reproducibility)
 
-| Seed | F1 | AUC |
+| Seed | F1 (calibrated) | AUC |
 |---|---|---|
-| 42 | 0.7733 | 0.8765 |
-| 123 | 0.7711 | 0.8738 |
-| 456 | 0.7721 | 0.8736 |
-| 789 | 0.7683 | 0.8714 |
-| 2024 | 0.7706 | 0.8728 |
-| **Mean ± Std** | **0.7711 ± 0.0017** | **0.8736 ± 0.0017** |
+| 42 | 0.7784 | 0.8805 |
+| 123 | 0.7796 | 0.8807 |
+| 456 | 0.7829 | 0.8807 |
+| 789 | 0.7701 | 0.8802 |
+| 2024 | 0.7812 | 0.8805 |
+| **Mean ± Std** | **0.7784 ± 0.0044** | **0.8805 ± 0.0002** |
 
-**Interpretation:** Standard deviation of 0.0017 confirms the model is highly stable. Results do not depend on the random seed. Full data in `research/seed_stability_results.json`.
+AUC std = 0.0002 is near-zero — the model's ranking ability is essentially deterministic across seeds. Full data: `research/seed_stability_final.json`.
 
-### Per-Platform Results
+### Per-Platform F1 (Mean ± Std, 5 Seeds, Calibrated, Held-Out Test Set)
 
-| Platform | F1 Score | AUC-ROC | Training Rows | Data Source |
+| Platform | F1 ± Std | AUC ± Std | Test Rows | Notes |
 |---|---|---|---|---|
-| **Instagram** | **0.924** | **0.983** | 3,186 | Real API captions |
-| **YouTube** | **0.891** | **0.936** | 40,000 | Real trending/non-trending titles |
-| **TikTok** | **0.853** | **0.933** | 40,000 | Real video transcriptions |
-| **Twitter** | **0.851** | **0.913** | 40,000 | Real tweets (3 sources) |
-| **Facebook** | **0.816** | **0.894** | 1,968 | Structured engagement data |
-| **LinkedIn** | **0.796** | **0.900** | 1,004 | Structured engagement data |
+| **YouTube** | **0.8945 ± 0.0007** | 0.9421 ± 0.0006 | 5,990 | Strongest platform, very stable |
+| **TikTok** | **0.8266 ± 0.0054** | 0.9129 ± 0.0007 | 6,047 | Strong and consistent |
+| **Reddit** | 0.8171 ± 0.0221 | 0.8951 ± 0.0037 | 123 | High std due to small test n |
+| **Twitter** | 0.7917 ± 0.0015 | 0.8861 ± 0.0006 | 6,023 | Highly stable |
+| **Facebook** | 0.7993 ± 0.0169 | 0.8855 ± 0.0019 | 205 | Limited test rows |
+| **LinkedIn** | 0.7888 ± 0.0217 | 0.8971 ± 0.0054 | 133 | Limited test rows |
+| **Instagram** | 0.5868 ± 0.0208 | 0.6813 ± 0.0019 | 5,971 | Data scarcity (see note) |
+
+> **Instagram note:** Instagram F1=0.587 reflects a fundamental data scarcity problem — only 1,406 unique real Instagram captions were available for training. The 40,000 rows in the balanced dataset are resampled from this pool, so the model memorises the distribution rather than generalising. Instagram is excluded from primary performance claims. Collecting more real Instagram data is the clearest path to improvement.
+
 
 ---
 
