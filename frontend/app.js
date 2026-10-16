@@ -39,6 +39,11 @@ const CONTENT_TYPES = {
     { id: 'reel',     label: 'Reel',           visual: 'required' },
     { id: 'story',    label: 'Story',          visual: 'required' },
   ],
+  reddit: [
+    { id: 'text',     label: 'Text Post',      visual: 'none' },
+    { id: 'link',     label: 'Link Post',      visual: 'none' },
+    { id: 'image',    label: 'Image Post',     visual: 'recommended' },
+  ],
 };
 
 const VISUAL_MODE_CONFIG = {
