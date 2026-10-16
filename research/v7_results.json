@@ -1,0 +1,28 @@
+{
+  "version": "v7_multiplatform_expansion",
+  "total_training_rows": 244958,
+  "new_rows_added": 61632,
+  "new_platforms": [
+    "reddit(+24K)",
+    "instagram(+30K)",
+    "facebook(+7K)"
+  ],
+  "method": "70/15/15 stratified split, 5 seeds, isotonic calibration",
+  "F1_mean": 0.7543,
+  "F1_std": 0.0125,
+  "AUC_mean": 0.8573,
+  "AUC_std": 0.0003,
+  "per_seed_F1": [
+    0.7705,
+    0.7582,
+    0.7372,
+    0.7426,
+    0.7628
+  ],
+  "v6_F1": 0.7775,
+  "v6_AUC": 0.8646,
+  "f1_delta": -0.0232,
+  "auc_delta": -0.0073,
+  "verdict": "REVERTED - v6 kept (v7 was worse: F1 dropped -0.0232, AUC dropped -0.0073)",
+  "reason": "New datasets lack NLP/image features (no captions/images). Zero-filled text features add noise to the model."
+}

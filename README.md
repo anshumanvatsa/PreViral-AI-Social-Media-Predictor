@@ -26,7 +26,6 @@
 |---|---|---|---|
 | YouTube | 0.8810 | 0.9306 | 6,054 |
 | TikTok | 0.8126 | 0.8989 | 5,851 |
-| Reddit | 0.8092 | 0.8848 | 138 |
 | Twitter/X | 0.7914 | 0.8814 | 5,991 |
 | LinkedIn | 0.7663 | 0.8677 | 152 |
 | Facebook | 0.7521 | 0.8728 | 212 |
@@ -55,7 +54,6 @@
 | Twitter | 40,000 | 20,000 | 20,000 |
 | YouTube | 40,000 | 20,000 | 20,000 |
 | Facebook | 1,428 | 714 | 714 |
-| Reddit | 908 | 454 | 454 |
 | LinkedIn | 940 | 470 | 470 |
 | **Total** | **163,276** | **81,638** | **81,638** |
 
@@ -105,7 +103,7 @@ Features computed live at inference time (< 12ms):
 
 **Structural Features**
 - Hashtag count
-- Platform one-hot encoding (7 platforms)
+- Platform one-hot encoding (6 platforms)
 - Content type encoding (reel, video, tweet, etc.)
 
 ---
@@ -160,7 +158,7 @@ Two modes:
 |---|---|---|---|---|
 | Pre-publication prediction | ❌ | Partial (text only) | Partial (Instagram image only) | ✅ Full (text + image + timing + hashtags) |
 | Counterfactual feature-level suggestions | ❌ | ❌ | ❌ | ✅ |
-| Multi-platform support | ✅ (scheduling) | ❌ | ❌ | ✅ 7 platforms |
+| Multi-platform support | ✅ (scheduling) | ❌ | ❌ | ✅ 6 platforms |
 | AI rewrite validated by ML model | ❌ | ❌ | ❌ | ✅ Best-of-N loop |
 | 10-day impression trajectory | ❌ | ❌ | ❌ | ✅ |
 | Open-source | ❌ | ❌ | ❌ | ✅ |
